@@ -57,25 +57,20 @@
 		<a href =""> placeholder 2 </a>
 	</div>
 <div class = "info">
-<h2>MBR Sign up</h2>
-
-<form action="/action_page.php">
-	<label for="oName"><b>Full name:</b></</label><br>
-	<input type="text" id="fname" name="fname" placeholder="John Doe"><br>
-	
+<h2>MBR Login</h2>
+<form action="action_page.php">
 	<label for="fname"><b>Email:</b></</label><br>
-	<input type="text" id="email" name="email" placeholder="Johndoe@gmail.com"><br>
+	<input type="text" id="email" name="email" placeholder="Johndoe@gmail.com" required><br>
 	
-	<label for="fname"><b>Phone number:</b></</label><br>
-	<input type="text" id="phonenum" name="phonenum" placeholder="000-000-0000"><br>
-
 	<label for="psw"><b>Password</b></label><br>
-	<input type="password" id = "psw" placeholder="Enter Password" name="psw" required> <br>
+	<input type="password" id = "psw" placeholder="Enter Password" name="psw" required><br><br>
 	
-	<input type="submit" value="Login">
-	<input type="submit" value="Sign up">
+	<input type="submit" value="Login"> 
 </form> 
-
+<form action="signup.html">
+<p> Don't have a account? sign up here! </p>
+    <input type="submit" value="Sign up" />
+</form>
 <script type = "text/javascript">
 	function myFunction() {
 	  var x = document.getElementById("psw");
