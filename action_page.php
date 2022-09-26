@@ -1,4 +1,5 @@
 <?php
-		echo $_POST['fname']"<br>";
-		echo "Your email address is: " , $_POST['email']; 
+
+		echo "Your email address is: " , $_GET['psw']; 
+		echo "Your password is", $_GET['psw'];		
 ?>
