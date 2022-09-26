@@ -1,8 +1,4 @@
-<html>
-	<body>
-
-		Welcome <?php echo $_POST["fname"]; ?><br>
-		Your email address is: <?php echo $_POST["email"]; ?>
-
-	</body>
-</html>
+<?php
+		echo $_POST['fname'];
+		echo "Your email address is: " , $_POST['email']; 
+?>
