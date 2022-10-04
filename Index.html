@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> MBR Home Page </title>
+	<title> MBR sign up Page </title>
 </head>
 <style>
  body{
@@ -57,30 +57,30 @@
 		<a href =""> placeholder 2 </a>
 	</div>
 <div class = "info">
-<h2>MBR Login</h2>
-<form action="action_login_page.php">
+<h2>MBR Sign up</h2>
+
+<form method = "post" action ="insert.php">
+	<label for="oName"><b>Full name:</b></</label><br>
+	<input type="text" id="fname" name="fname" placeholder="John Doe"><br>
+	
 	<label for="fname"><b>Email:</b></</label><br>
-	<input type="text" id="email" name="email" placeholder="Johndoe@gmail.com" required><br>
+	<input type="text" id="email" name="email" placeholder="Johndoe@gmail.com"><br>
 	
+	<label for="fname"><b>Phone number:</b></</label><br>
+	<input type="text" id="phonenum" name="phonenum" placeholder="000-000-0000"><br>
+	
+	<label for="fname"><b>Pets name: </b></</label><br>
+	<input type="text" id="oPet" name="oPet" placeholder="Rex"><br>
+
 	<label for="psw"><b>Password</b></label><br>
-	<input type="password" id = "psw" placeholder="Enter Password" name="psw" required><br><br>
+	<input type="password" id = "psw" placeholder="Enter Password" name="psw" required> <br>
 	
-	<input type="submit" value="Login"> 
+	<input type="submit" value="Sign up">
 </form> 
-<form action="signup.html">
-<p> Don't have a account? sign up here! </p>
-    <input type="submit" value="Sign up" />
+<form action="MBR_login.html">
+<p> Already have a account? login here! </p>
+    <input type="submit" value="Login" />
 </form>
-<script type = "text/javascript">
-	function myFunction() {
-	  var x = document.getElementById("psw");
-	  if (x.type === "password") {
-		x.type = "text";
-	  } else {
-		x.type = "password";
-	  }
-	} 
-</script>
 </div>
 </body>
 </html>
