@@ -167,6 +167,45 @@
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
 test page
+<form action="action_page.php">
+	<label for="oName"><b>Full name:</b></</label><br>
+	<input type="text" id="fname" name="fname" placeholder="John Doe" required><br>
+	
+	<label for="fname"><b>Email:</b></</label><br>
+	<input type="text" id="email" name="email" placeholder="Johndoe@gmail.com" required><br>
+	
+	<label for="fname"><b>Phone number:</b></</label><br>
+	<input type="text" id="phonenum" name="phonenum" placeholder="000-000-0000"><br>
+
+	<label for="psw"><b>Password</b></label><br>
+	<input type="password" id = "psw" placeholder="Enter Password" name="psw" required> <br>
+	
+	<label for="reppsw"><b>Repeat Password</b></label><br>
+	<input type="password" id = "reppsw" placeholder="Repeat Password" name="reppsw" required> <br>
+	
+	<input type="submit" value="Sign up">
+</form> 
+<br><br>
+<a href = "testLogin.html">Already have an account? Login here! </a>
+
+<script type = "text/javascript">
+	function myFunction() {
+	  var x = document.getElementById("psw");
+	  if (x.type === "password") {
+		x.type = "text";
+	  } else {
+		x.type = "password";
+	  }
+	} 
+	function myFunction() {
+	  var x = document.getElementById("reppsw");
+	  if (x.type === "password") {
+		x.type = "text";
+	  } else {
+		x.type = "password";
+	  }
+	} 
+</script>
 </div> 
 
 <script>
