@@ -53,7 +53,7 @@
 		<a class = "icon"> <img src="MBRicon.png" alt="Icon" width="40" height="30"></a>
 		<a href = "MBRaboutpage.html"> About </a>
 		<a class = "active"> Login/Sign up </a>
-		<a href =""> placeholder 1 </a>
+		<a href ="MBR_admin.php"> Admin</a>
 		<a href =""> placeholder 2 </a>
 	</div>
 <div class = "info">
@@ -61,25 +61,23 @@
 
 <form method = "post" action ="insert.php">
 	<label for="oName"><b>Full name:</b></</label><br>
-	<input type="text" id="fname" name="fname" placeholder="John Doe"><br>
+	<input type="text" id="fname" name="fname" placeholder="John Doe"required><br>
 	
 	<label for="fname"><b>Email:</b></</label><br>
-	<input type="text" id="email" name="email" placeholder="Johndoe@gmail.com"><br>
+	<input type="text" id="email" name="email" placeholder="Johndoe@gmail.com" required><br>
 	
 	<label for="fname"><b>Phone number:</b></</label><br>
-	<input type="text" id="phonenum" name="phonenum" placeholder="000-000-0000"><br>
+	<input type="text" id="phonenum" name="phonenum" placeholder="000-000-0000" required><br>
 	
 	<label for="fname"><b>Pets name: </b></</label><br>
-	<input type="text" id="oPet" name="oPet" placeholder="Rex"><br>
+	<input type="text" id="oPet" name="oPet" placeholder="Rex" required><br>
 
 	<label for="psw"><b>Password</b></label><br>
-	<input type="password" id = "psw" placeholder="Enter Password" name="psw" required> <br>
+	<input type="password" id = "psw" placeholder="Enter Password" name="psw" required > <br> <br>
 	
-	<input type="submit" value="Sign up">
-</form> 
-<form action="MBR_login.html">
-<p> Already have a account? login here! </p>
-    <input type="submit" value="Login" />
+	<input type="submit" value="Sign up"> <br><br>
+</form>
+<a href = "MBR_login.html">Dont have an account? Sign up here!</a>
 </form>
 </div>
 </body>
