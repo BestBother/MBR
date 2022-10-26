@@ -17,6 +17,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
+        echo "<input type=\"radio\" id=\"".$row["ownID"]. "\" name=\"oName\" value=\"". $row["ownID"]. "\">
         echo "<br> id: ". $row["ownID"]. " - Name: ".$row["oName"]. "<br>";
     }
 } else {
