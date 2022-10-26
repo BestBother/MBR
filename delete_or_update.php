@@ -2,7 +2,7 @@
 
 if (isset($_POST['delete'])) {
     # Delete record-button was clicked
-    $_record = $_POST['student_list'];
+    $_record = $_POST['ownID'];
     echo '<h1>Deleting record '.$_record.' from database </h1>';
 
     $servername = "localhost";
