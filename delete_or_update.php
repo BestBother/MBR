@@ -2,7 +2,7 @@
 
 if (isset($_POST['delete'])) {
     # Delete record-button was clicked
-    $_record = $_POST['ownID'];
+    $_record = $_POST['oName'];
     echo '<h1>Deleting record '.$_record.' from database </h1>';
 
     $servername = "localhost";
@@ -27,7 +27,7 @@ if (isset($_POST['delete'])) {
         echo "Error deleting record: " . $conn->error;
     }
 
-    include 'mbr_admin.php';
+    include 'MBR_admin.php';
 
     //No need to close connection. It closes after running display.php
     //$conn->close();
@@ -35,7 +35,7 @@ if (isset($_POST['delete'])) {
 }
 elseif (isset($_POST['update'])) {
     # Update record-button was clicked
-    $_record = $_POST['ownID'];
+    $_record = $_POST['oName'];
     echo '<h1>Updating record '.$_record.' from database </h1>';
 }
 
