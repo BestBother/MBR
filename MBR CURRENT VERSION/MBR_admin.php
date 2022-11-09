@@ -146,10 +146,10 @@
       <a href="index.php">Login</a>
     </div>
   </div>
-  <a href="#contact">About</a>
-  <a href="#faq">FAQ</a>
+  <a href="about.php">About</a>
+  <a href="MBR_faq.php">FAQ</a>
   <a class = "active" href="MBR_admin.php">Admin</a>
-  <a href="#help">Help</a>
+  <a href="MBR_help.php">Help</a>
 </div> 
 
  <div id="mySidenav" class="sidenav">
