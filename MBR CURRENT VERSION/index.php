@@ -139,42 +139,19 @@
 
 </style>
 <body>
- <div class="topnav">
-  <a href="#home"><span onclick="openNav()"> Home </span> </a>
-  <div class="dropdown">
-    <button class="dropbtn">Account
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="MBR_signup.html">Sign up</a>
-      <a class = "active" href="testlogin.html">Login</a>
-    </div>
-  </div>
-  <a href="#contact">About</a>
-  <a href="#faq">FAQ</a>
-  <a href="MBR_admin.php">Admin</a>
-  <a href="#help">Help</a>
-</div> 
-
- <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Profile</a>
-  <a href="MBR_pets.html">Pets</a>
-  <a href="#">Appointments</a>
-  <a href="#">Calendar</a>
-</div>
+ 
 
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
-test page
+
 <?php
 $servername = "localhost";
 $username = "Bother";
 $password = "1234";
 $dbname = "mbr_test_database";
 
-
+error_reporting(E_ALL ^ E_WARNING); 
 $email = $_POST['email'];
 $psw = $_POST['psw'];
 
@@ -193,19 +170,76 @@ if ($conn->connect_error) {
         $count = $row['owner'];
 
         if($count > 0){
+			session_start();
 			$_SESSION['email'] = $email;
-            echo "Login successful";
+            #echo "Login successful";
+     
         }else{
             echo "Invalid username and password";
         }
 
     }
-    if(isset($_SESSION))
-        echo"$('#d2').css('displavbvbvy','');";  
-    else
-        echo"$('#d1').css('displayyyyy','');";
+    if(isset($_SESSION)){ 
+	echo $_SESSION['email']." Logged in";
+	?>
+	<div class="topnav">
+  <a href="#home"><span onclick="openNav()"> Home </span> </a>
+  <div class="dropdown">
+    <button id = "AC" class="dropbtn">Account
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="MBR_signup.html">Sign up</a>
+      <a class = "active">Login</a>
+    </div>
+  </div>
+  <a href="about.php">About</a>
+  <a href="MBR_faq.php">FAQ</a>
+  <a href="MBR_admin.php">Admin</a>
+  <a href="MBR_help.php">Help</a>
+</div> 
+
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Profile</a>
+  <a href="MBR_pets.html">Pets</a>
+  <a href="#">Appointments</a>
+  <a href="#">Calendar</a>
+</div>
+	<?php
+		
+		}
+    else{
+	?>
+	<div class="topnav">
+  <a href="#home"><span onclick="openNav()"> Home </span> </a>
+  <div class="dropdown">
+    <button id = "AC" class="dropbtn">Account
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="MBR_signup.html">Sign up</a>
+      <a class = "active" >Login</a>
+    </div>
+  </div>
+  <a href="about.php">About</a>
+  <a href="MBR_faq.php">FAQ</a>
+  <a href="MBR_admin.php">Admin</a>
+  <a href="MBR_help.php">Help</a>
+</div> 
+
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Profile</a>
+  <a href="MBR_pets.html">Pets</a>
+  <a href="#">Appointments</a>
+  <a href="#">Calendar</a>
+</div>
+	<?php
+		}
 include 'connect.php';
 ?>
+
 <form method = "post" action="">
 	
 	<label for="fname"><b>Email:</b></</label><br>
@@ -218,7 +252,7 @@ include 'connect.php';
 	<input type="submit" value="Login">
 </form> 
 <br><br>
-<a href = "testsignup.html">Dont have an account? Sign up here!</a>
+<a href = "MBR_signup.html">Dont have an account? Sign up here!</a>
 <script type = "text/javascript">
 	function myFunction() {
 	  var x = document.getElementById("psw");
