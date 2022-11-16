@@ -166,7 +166,7 @@
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
-<form method = "post" action ="insert.php">
+<form method = "post" action = "">
 	<label for="oName"><b>Full name:</b></</label><br>
 	<input type="text" id="fname" name="fname" placeholder="John Doe" required><br>
 	
@@ -203,7 +203,70 @@
 	} 
 </script>
 </div> 
+<?php
+$servername = "localhost";
+$username = "Bother";
+$password = "1234";
+$dbname = "mbr_test_database";
 
+$fname = $_POST['fname'];
+$email = $_POST['email'];
+$phonenum = $_POST['phonenum'];
+$psw = $_POST['psw'];
+
+
+$ownID = 57215431;
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$dup_emailcheck = "select count(*) as owner from owner where email ='".$email."'";
+$result = mysqli_query($conn,$dup_emailcheck);
+        $row = mysqli_fetch_array($result);
+
+        $countemail = $row['owner'];
+		if($countemail > 0){
+			echo "This Email has already been used";
+		}else{
+			
+		}
+$dup_IDcheck = "select count(*) as owner from owner where ownID ='".$ownID."'";
+$result = mysqli_query($conn,$dup_IDcheck);
+        $row = mysqli_fetch_array($result);
+
+        $countID = $row['owner'];
+if($countID > 0){
+	$IDdup = true;
+	while($IDdup){
+		$ownID += 1;
+		$dup_IDcheck = "select count(*) as owner from owner where ownID ='".$ownID."'";
+		$resultid = mysqli_query($conn,$dup_IDcheck);
+        $row = mysqli_fetch_array($resultid);
+
+        $countID = $row['owner'];
+	if($countID == 0){
+		$IDdup = false;
+	}
+	}
+}
+$sql = "INSERT INTO owner(ownID, oName, email, psw,phonenum)
+VALUES('$ownID', '$fname', '$email', '$psw','$phonenum')";
+   if($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+include 'connect.php';
+?>
+
+
+
+?>
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
