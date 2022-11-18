@@ -5,3 +5,8 @@ Reflective Essay (individual)
 4.1 front.end (webpages, webpage transition, explain web-page purpose)
 
 4.2 back-end (snapshots of php, snapshots of tables in phpmyadmin, explain purposes of code & tables)
+
+Show tables that are not present in php but are in the design
+email professor 3 days ahead to professor to make sure it looks okay to Dr. Muhammed
+
+Use MLA Format 

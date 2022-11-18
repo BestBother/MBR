@@ -167,7 +167,7 @@ session_start();
 	<div class="topnav">
   <span onclick="openNav()"><a href="#home">My Home</a></span>
   <a href="about.php">About</a>
-  <a class = "MBR_faq.php" >FAQ</a>
+  <a href = "MBR_faq.php" >FAQ</a>
   <a href="MBR_admin.php">Admin</a>
   <a class = "active" >Help</a>
 </div> 
@@ -198,7 +198,7 @@ session_start();
   
   <- Has no side nav because user is not signed in->
   <a href="about.php">About</a>
-  <a class = "MBR_faq.php" >FAQ</a>
+  <a href ="MBR_faq.php" >FAQ</a>
   <a href="MBR_admin.php">Admin</a>
   <a class = "active" >Help</a>
 </div> 

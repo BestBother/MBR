@@ -171,7 +171,6 @@ if ($conn->connect_error) {
     if(isset($_SESSION)){ 
 	echo $_SESSION['email']." Logged in";
 	?>
-	<-- has sidenav because user is logged in-->
 	<div class="topnav">
   <span onclick="openNav()"><a href="#home">My Home</a></span>
   <a href="about.php">About</a>
@@ -210,6 +209,16 @@ if ($conn->connect_error) {
   <a class = "active" >Admin</a>
   <a href="MBR_help.php">Help</a>
 </div> 
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 	<?php
 		}
