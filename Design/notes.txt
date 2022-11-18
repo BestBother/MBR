@@ -1,0 +1,7 @@
+Project File
+Reflective Essay (individual)
+
+4. Current Project progress
+4.1 front.end (webpages, webpage transition, explain web-page purpose)
+
+4.2 back-end (snapshots of php, snapshots of tables in phpmyadmin, explain purposes of code & tables)
